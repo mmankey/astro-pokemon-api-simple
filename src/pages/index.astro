@@ -18,16 +18,21 @@ function capitolizeFirstLetter(string) {
 
 <Layout title={"Pokemon API in Astro"}>
 	<main>
-		<div style="text-align: center;">
-			<h1>{capitolizeFirstLetter(response.name)}</h1>
+		<div
+			style="text-align: center;display:flex;flex-direction: column;align-items: center;justify-content: center;"
+		>
+			<h1 style="max-height: 20vh;">
+				{capitolizeFirstLetter(response.name)}
+			</h1>
 			<img
+				style="max-height: 60vh;"
 				src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${randomPokemon}.png`}
 				alt={response.name}
 				title={randomPokemon.toString()}
 			/>
-			<br />
-			<br />
+
 			<svg
+				style="max-height: 20vh;"
 				id="pokeball"
 				data-name="Layer 1"
 				xmlns="http://www.w3.org/2000/svg"
