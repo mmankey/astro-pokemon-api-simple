@@ -3,7 +3,6 @@ import Layout from "../layouts/Layout.astro";
 
 const totalPokemon = 1015;
 let randomPokemon = Math.floor(Math.random() * totalPokemon) + 1;
-console.log(randomPokemon);
 //fetch from poke api
 const response = await fetch(
 	`https://pokeapi.co/api/v2/pokemon/${randomPokemon}`
@@ -95,5 +94,26 @@ function capitolizeFirstLetter(string) {
 	#pokeball:hover {
 		cursor: pointer;
 		animation: spin 1s linear infinite;
+	}
+	svg {
+		transition: transform 0.7s ease-in-out;
+	}
+	svg:hover {
+		transform: rotate(360deg);
+	}
+
+	main {
+		animation: fadeInAnimation ease 2s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes fadeInAnimation {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
 	}
 </style>
