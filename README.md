@@ -1,3 +1,6 @@
+## Cloudflare Pages URL
+https://astro-pokemon.pages.dev/
+
 
 ## 🧞 Commands
 
